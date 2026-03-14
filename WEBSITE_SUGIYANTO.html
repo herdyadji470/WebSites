@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WEBSITE_SUGIYANTO.txt</title>
+<style>body{font-family:monospace;line-height:1.6;max-width:800px;margin:0 auto;padding:16px;white-space:pre-wrap;}</style>
+</head>
+<body>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="id"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Sugiyanto - Karyawan Swasta &amp; Pecinta Touring&lt;/title&gt;
+    &lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;
+    &lt;link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet"&gt;
+    &lt;script&gt;
+        // Konfigurasi Tailwind
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1E3A8A', // Biru tua
+                        secondary: '#FF7F50', // Oranye
+                        dark: '#1F2937',
+                        light: '#F3F4F6'
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    &lt;/script&gt;
+    &lt;style type="text/tailwindcss"&gt;
+        @layer utilities {
+            .text-shadow {
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            }
+            .transition-custom {
+                transition: all 0.3s ease;
+            }
+            .card-hover:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            }
+        }
+    &lt;/style&gt;
+    &lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;
+    &lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;
+    &lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"&gt;
+&lt;/head&gt;
+&lt;body class="font-inter bg-light text-dark overflow-x-hidden"&gt;
+    &lt;!-- Navbar --&gt;
+    &lt;nav class="fixed w-full bg-white/90 backdrop-blur-sm shadow-sm z-50 transition-custom"&gt;
+        &lt;div class="container mx-auto px-4 py-3 flex justify-between items-center"&gt;
+            &lt;a href="#" class="text-2xl font-bold text-primary"&gt;Sugiyanto&lt;span class="text-secondary"&gt;.&lt;/span&gt;&lt;/a&gt;
+            
+            &lt;!-- Menu Desktop --&gt;
+            &lt;div class="hidden md:flex space-x-8"&gt;
+                &lt;a href="#beranda" class="font-medium hover:text-secondary transition-custom"&gt;Beranda&lt;/a&gt;
+                &lt;a href="#tentang" class="font-medium hover:text-secondary transition-custom"&gt;Tentang&lt;/a&gt;
+                &lt;a href="#hobi" class="font-medium hover:text-secondary transition-custom"&gt;Hobi Touring&lt;/a&gt;
+                &lt;a href="#kontak" class="font-medium hover:text-secondary transition-custom"&gt;Kontak&lt;/a&gt;
+            &lt;/div&gt;
+            
+            &lt;!-- Tombol Menu Mobile --&gt;
+            &lt;button id="menu-toggle" class="md:hidden text-dark text-xl"&gt;
+                &lt;i class="fa fa-bars"&gt;&lt;/i&gt;
+            &lt;/button&gt;
+        &lt;/div&gt;
+        
+        &lt;!-- Menu Mobile --&gt;
+        &lt;div id="mobile-menu" class="md:hidden hidden bg-white shadow-md"&gt;
+            &lt;div class="container mx-auto px-4 py-3 flex flex-col space-y-4"&gt;
+                &lt;a href="#beranda" class="font-medium hover:text-secondary transition-custom"&gt;Beranda&lt;/a&gt;
+                &lt;a href="#tentang" class="font-medium hover:text-secondary transition-custom"&gt;Tentang&lt;/a&gt;
+                &lt;a href="#hobi" class="font-medium hover:text-secondary transition-custom"&gt;Hobi Touring&lt;/a&gt;
+                &lt;a href="#kontak" class="font-medium hover:text-secondary transition-custom"&gt;Kontak&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/nav&gt;
+
+    &lt;!-- Hero Section --&gt;
+    &lt;section id="beranda" class="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary/10 to-secondary/10 pt-16"&gt;
+        &lt;div class="container mx-auto px-4 flex flex-col md:flex-row items-center"&gt;
+            &lt;div class="md:w-1/2 mb-10 md:mb-0"&gt;
+                &lt;h1 class="text-[clamp(2.5rem,5vw,4rem)] font-bold leading-tight text-shadow mb-4"&gt;
+                    Halo, Saya &lt;span class="text-primary"&gt;Sugiyanto&lt;/span&gt;
+                &lt;/h1&gt;
+                &lt;p class="text-[clamp(1.1rem,2vw,1.5rem)] text-gray-700 mb-8"&gt;
+                    Karyawan Swasta yang &lt;span class="text-secondary font-semibold"&gt;Pecinta Touring&lt;/span&gt;
+                &lt;/p&gt;
+                &lt;div class="flex flex-wrap gap-4"&gt;
+                    &lt;a href="#tentang" class="bg-primary text-white px-8 py-3 rounded-lg font-medium hover:bg-primary/90 transition-custom"&gt;
+                        Tentang Saya
+                    &lt;/a&gt;
+                    &lt;a href="#hobi" class="bg-secondary text-white px-8 py-3 rounded-lg font-medium hover:bg-secondary/90 transition-custom"&gt;
+                        Lihat Kegiatan Touring
+                    &lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="md:w-1/2 flex justify-center"&gt;
+                &lt;div class="relative"&gt;
+                    &lt;div class="absolute inset-0 bg-secondary/20 rounded-full blur-3xl"&gt;&lt;/div&gt;
+                    &lt;img src="https://picsum.photos/id/1005/500/500" alt="Foto Sugiyanto" class="relative rounded-full w-72 h-72 md:w-80 md:h-80 object-cover border-8 border-white shadow-xl"&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;!-- Tentang Section --&gt;
+    &lt;section id="tentang" class="py-20 bg-white"&gt;
+        &lt;div class="container mx-auto px-4"&gt;
+            &lt;h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-center mb-16"&gt;
+                &lt;span class="text-primary"&gt;Tentang&lt;/span&gt; Saya
+            &lt;/h2&gt;
+            
+            &lt;div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center"&gt;
+                &lt;div&gt;
+                    &lt;h3 class="text-2xl font-semibold mb-4"&gt;Profil Singkat&lt;/h3&gt;
+                    &lt;p class="text-gray-700 mb-4 leading-relaxed"&gt;
+                        Perkenalkan, nama saya Sugiyanto. Saya adalah seorang karyawan swasta yang bekerja dengan dedikasi dan profesionalitas di bidang saya. Sehari-hari saya fokus menyelesaikan tugas-tugas pekerjaan dengan baik dan terus mengembangkan kemampuan diri.
+                    &lt;/p&gt;
+                    &lt;p class="text-gray-700 mb-6 leading-relaxed"&gt;
+                        Di luar pekerjaan, saya memiliki hasrat yang besar terhadap dunia otomotif, khususnya kegiatan touring. Bagi saya, touring bukan sekadar hobi, tapi juga cara untuk melepas penat, menjelajahi tempat baru, dan bertemu dengan orang-orang baru yang memiliki minat yang sama.
+                    &lt;/p&gt;
+                    
+                    &lt;div class="grid grid-cols-2 gap-4 mb-6"&gt;
+                        &lt;div class="bg-light p-4 rounded-lg"&gt;
+                            &lt;p class="text-primary font-bold text-xl"&gt;10+&lt;/p&gt;
+                            &lt;p class="text-gray-600"&gt;Tahun Pengalaman Kerja&lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;div class="bg-light p-4 rounded-lg"&gt;
+                            &lt;p class="text-secondary font-bold text-xl"&gt;50+&lt;/p&gt;
+                            &lt;p class="text-gray-600"&gt;Rute Touring Dijelajahi&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    
+                    &lt;a href="#kontak" class="inline-block bg-primary text-white px-6 py-2 rounded-lg font-medium hover:bg-primary/90 transition-custom"&gt;
+                        Hubungi Saya
+                    &lt;/a&gt;
+                &lt;/div&gt;
+                
+                &lt;div class="grid grid-cols-2 gap-4"&gt;
+                    &lt;img src="https://picsum.photos/id/1076/300/400" alt="Kegiatan Kerja" class="rounded-lg shadow-md h-full object-cover card-hover transition-custom"&gt;
+                    &lt;div class="grid grid-rows-2 gap-4"&gt;
+                        &lt;img src="https://picsum.photos/id/1077/300/200" alt="Touring 1" class="rounded-lg shadow-md w-full h-full object-cover card-hover transition-custom"&gt;
+                        &lt;img src="https://picsum.photos/id/1078/300/200" alt="Touring 2" class="rounded-lg shadow-md w-full h-full object-cover card-hover transition-custom"&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;!-- Hobi Touring Section --&gt;
+    &lt;section id="hobi" class="py-20 bg-light"&gt;
+        &lt;div class="container mx-auto px-4"&gt;
+            &lt;h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-center mb-4"&gt;
+                Hobi &lt;span class="text-secondary"&gt;Touring&lt;/span&gt;
+            &lt;/h2&gt;
+            &lt;p class="text-gray-700 text-center max-w-2xl mx-auto mb-16"&gt;
+                Jelajahi keindahan Indonesia melalui perjalanan touring saya. Setiap perjalanan memiliki cerita dan pengalaman yang tak terlupakan.
+            &lt;/p&gt;
+            
+            &lt;div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"&gt;
+                &lt;!-- Card Touring 1 --&gt;
+                &lt;div class="bg-white rounded-xl shadow-md overflow-hidden card-hover transition-custom"&gt;
+                    &lt;img src="https://picsum.photos/id/1039/600/400" alt="Touring ke Pantai" class="w-full h-56 object-cover"&gt;
+                    &lt;div class="p-6"&gt;
+                        &lt;h3 class="text-xl font-semibold mb-2"&gt;Touring Pantai Selatan&lt;/h3&gt;
+                        &lt;p class="text-gray-600 mb-4"&gt;Perjalanan menyusuri pantai-pantai indah di selatan Jawa dengan pemandangan laut yang memukau dan angin sepoi-sepoi.&lt;/p&gt;
+                        &lt;div class="flex items-center text-gray-500"&gt;
+                            &lt;i class="fa fa-calendar mr-2"&gt;&lt;/i&gt;
+                            &lt;span&gt;Juli 2023&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                
+                &lt;!-- Card Touring 2 --&gt;
+                &lt;div class="bg-white rounded-xl shadow-md overflow-hidden card-hover transition-custom"&gt;
+                    &lt;img src="https://picsum.photos/id/1040/600/400" alt="Touring ke Pegunungan" class="w-full h-56 object-cover"&gt;
+                    &lt;div class="p-6"&gt;
+                        &lt;h3 class="text-xl font-semibold mb-2"&gt;Eksplorasi Pegunungan&lt;/h3&gt;
+                        &lt;p class="text-gray-600 mb-4"&gt;Menjelajahi jalanan berkelok di pegunungan dengan udara sejuk dan pemandangan hijau yang menyejukkan mata.&lt;/p&gt;
+                        &lt;div class="flex items-center text-gray-500"&gt;
+                            &lt;i class="fa fa-calendar mr-2"&gt;&lt;/i&gt;
+                            &lt;span&gt;September 2023&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                
+                &lt;!-- Card Touring 3 --&gt;
+                &lt;div class="bg-white rounded-xl shadow-md overflow-hidden card-hover transition-custom"&gt;
+                    &lt;img src="https://picsum.photos/id/1041/600/400" alt="Touring Kota Tua" class="w-full h-56 object-cover"&gt;
+                    &lt;div class="p-6"&gt;
+                        &lt;h3 class="text-xl font-semibold mb-2"&gt;Wisata Kota Tua&lt;/h3&gt;
+                        &lt;p class="text-gray-600 mb-4"&gt;Perjalanan mengunjungi kota-kota tua dengan bangunan bersejarah dan budaya yang kaya akan cerita.&lt;/p&gt;
+                        &lt;div class="flex items-center text-gray-500"&gt;
+                            &lt;i class="fa fa-calendar mr-2"&gt;&lt;/i&gt;
+                            &lt;span&gt;November 2023&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            
+            &lt;div class="text-center mt-12"&gt;
+                &lt;a href="#" class="inline-block bg-secondary text-white px-8 py-3 rounded-lg font-medium hover:bg-secondary/90 transition-custom"&gt;
+                    Lihat Lebih Banyak Cerita Touring
+                &lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;!-- Kontak Section --&gt;
+    &lt;section id="kontak" class="py-20 bg-white"&gt;
+        &lt;div class="container mx-auto px-4"&gt;
+            &lt;h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-center mb-4"&gt;
+                &lt;span class="text-primary"&gt;Kontak&lt;/span&gt; Saya
+            &lt;/h2&gt;
+            &lt;p class="text-gray-700 text-center max-w-2xl mx-auto mb-16"&gt;
+                Jangan ragu untuk menghubungi saya jika ingin berdiskusi tentang pekerjaan atau berbagi cerita tentang dunia touring.
+            &lt;/p&gt;
+            
+            &lt;div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto"&gt;
+                &lt;div&gt;
+                    &lt;div class="bg-light p-8 rounded-xl shadow-sm"&gt;
+                        &lt;h3 class="text-xl font-semibold mb-6"&gt;Informasi Kontak&lt;/h3&gt;
+                        
+                        &lt;div class="space-y-4"&gt;
+                            &lt;div class="flex items-center"&gt;
+                                &lt;div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary mr-4"&gt;
+                                    &lt;i class="fa fa-envelope text-xl"&gt;&lt;/i&gt;
+                                &lt;/div&gt;
+                                &lt;div&gt;
+                                    &lt;p class="text-gray-600 text-sm"&gt;Gmail&lt;/p&gt;
+                                    &lt;p class="font-medium"&gt;zugytozuro90@gmail.com&lt;/p&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                            
+                            &lt;div class="flex items-center"&gt;
+                                &lt;div class="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center text-secondary mr-4"&gt;
+                                    &lt;i class="fa fa-phone text-xl"&gt;&lt;/i&gt;
+                                &lt;/div&gt;
+                                &lt;div&gt;
+                                    &lt;p class="text-gray-600 text-sm"&gt;Telepon / WhatsApp&lt;/p&gt;
+                                    &lt;p class="font-medium"&gt;+62 857-2400-0073&lt;/p&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                            
+                            &lt;div class="flex items-center"&gt;
+                                &lt;div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary mr-4"&gt;
+                                    &lt;i class="fa fa-map-marker text-xl"&gt;&lt;/i&gt;
+                                &lt;/div&gt;
+                                &lt;div&gt;
+                                    &lt;p class="text-gray-600 text-sm"&gt;Lokasi&lt;/p&gt;
+                                    &lt;p class="font-medium"&gt;Jakarta, Indonesia&lt;/p&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        
+                        &lt;div class="mt-8"&gt;
+                            &lt;p class="text-gray-600 mb-4"&gt;Ikuti Saya di Media Sosial:&lt;/p&gt;
+                            &lt;div class="flex space-x-4"&gt;
+                                &lt;a href="#" class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-custom"&gt;
+                                    &lt;i class="fa fa-instagram"&gt;&lt;/i&gt;
+                                &lt;/a&gt;
+                                &lt;a href="#" class="w-10 h-10 bg-secondary/10 rounded-full flex items-center justify-center text-secondary hover:bg-secondary hover:text-white transition-custom"&gt;
+                                    &lt;i class="fa fa-facebook"&gt;&lt;/i&gt;
+                                &lt;/a&gt;
+                                &lt;a href="#" class="w-10 h-10 bg-primary/10 rounded
+
+
+</body>
+</html>
