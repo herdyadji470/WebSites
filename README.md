@@ -1,2 +1,264 @@
-# WebSites
-WebSites
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sugiyanto - Karyawan Swasta & Pecinta Touring</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        // Konfigurasi Tailwind
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1E3A8A', // Biru tua
+                        secondary: '#FF7F50', // Oranye
+                        dark: '#1F2937',
+                        light: '#F3F4F6'
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow {
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            }
+            .transition-custom {
+                transition: all 0.3s ease;
+            }
+            .card-hover:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            }
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="font-inter bg-light text-dark overflow-x-hidden">
+    <!-- Navbar -->
+    <nav class="fixed w-full bg-white/90 backdrop-blur-sm shadow-sm z-50 transition-custom">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-primary">Sugiyanto<span class="text-secondary">.</span></a>
+            
+            <!-- Menu Desktop -->
+            <div class="hidden md:flex space-x-8">
+                <a href="#beranda" class="font-medium hover:text-secondary transition-custom">Beranda</a>
+                <a href="#tentang" class="font-medium hover:text-secondary transition-custom">Tentang</a>
+                <a href="#hobi" class="font-medium hover:text-secondary transition-custom">Hobi Touring</a>
+                <a href="#kontak" class="font-medium hover:text-secondary transition-custom">Kontak</a>
+            </div>
+            
+            <!-- Tombol Menu Mobile -->
+            <button id="menu-toggle" class="md:hidden text-dark text-xl">
+                <i class="fa fa-bars"></i>
+            </button>
+        </div>
+        
+        <!-- Menu Mobile -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white shadow-md">
+            <div class="container mx-auto px-4 py-3 flex flex-col space-y-4">
+                <a href="#beranda" class="font-medium hover:text-secondary transition-custom">Beranda</a>
+                <a href="#tentang" class="font-medium hover:text-secondary transition-custom">Tentang</a>
+                <a href="#hobi" class="font-medium hover:text-secondary transition-custom">Hobi Touring</a>
+                <a href="#kontak" class="font-medium hover:text-secondary transition-custom">Kontak</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="beranda" class="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary/10 to-secondary/10 pt-16">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-[clamp(2.5rem,5vw,4rem)] font-bold leading-tight text-shadow mb-4">
+                    Halo, Saya <span class="text-primary">Sugiyanto</span>
+                </h1>
+                <p class="text-[clamp(1.1rem,2vw,1.5rem)] text-gray-700 mb-8">
+                    Karyawan Swasta yang <span class="text-secondary font-semibold">Pecinta Touring</span>
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#tentang" class="bg-primary text-white px-8 py-3 rounded-lg font-medium hover:bg-primary/90 transition-custom">
+                        Tentang Saya
+                    </a>
+                    <a href="#hobi" class="bg-secondary text-white px-8 py-3 rounded-lg font-medium hover:bg-secondary/90 transition-custom">
+                        Lihat Kegiatan Touring
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative">
+                    <div class="absolute inset-0 bg-secondary/20 rounded-full blur-3xl"></div>
+                    <img src="https://picsum.photos/id/1005/500/500" alt="Foto Sugiyanto" class="relative rounded-full w-72 h-72 md:w-80 md:h-80 object-cover border-8 border-white shadow-xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tentang Section -->
+    <section id="tentang" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-center mb-16">
+                <span class="text-primary">Tentang</span> Saya
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4">Profil Singkat</h3>
+                    <p class="text-gray-700 mb-4 leading-relaxed">
+                        Perkenalkan, nama saya Sugiyanto. Saya adalah seorang karyawan swasta yang bekerja dengan dedikasi dan profesionalitas di bidang saya. Sehari-hari saya fokus menyelesaikan tugas-tugas pekerjaan dengan baik dan terus mengembangkan kemampuan diri.
+                    </p>
+                    <p class="text-gray-700 mb-6 leading-relaxed">
+                        Di luar pekerjaan, saya memiliki hasrat yang besar terhadap dunia otomotif, khususnya kegiatan touring. Bagi saya, touring bukan sekadar hobi, tapi juga cara untuk melepas penat, menjelajahi tempat baru, dan bertemu dengan orang-orang baru yang memiliki minat yang sama.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-4 mb-6">
+                        <div class="bg-light p-4 rounded-lg">
+                            <p class="text-primary font-bold text-xl">10+</p>
+                            <p class="text-gray-600">Tahun Pengalaman Kerja</p>
+                        </div>
+                        <div class="bg-light p-4 rounded-lg">
+                            <p class="text-secondary font-bold text-xl">50+</p>
+                            <p class="text-gray-600">Rute Touring Dijelajahi</p>
+                        </div>
+                    </div>
+                    
+                    <a href="#kontak" class="inline-block bg-primary text-white px-6 py-2 rounded-lg font-medium hover:bg-primary/90 transition-custom">
+                        Hubungi Saya
+                    </a>
+                </div>
+                
+                <div class="grid grid-cols-2 gap-4">
+                    <img src="https://picsum.photos/id/1076/300/400" alt="Kegiatan Kerja" class="rounded-lg shadow-md h-full object-cover card-hover transition-custom">
+                    <div class="grid grid-rows-2 gap-4">
+                        <img src="https://picsum.photos/id/1077/300/200" alt="Touring 1" class="rounded-lg shadow-md w-full h-full object-cover card-hover transition-custom">
+                        <img src="https://picsum.photos/id/1078/300/200" alt="Touring 2" class="rounded-lg shadow-md w-full h-full object-cover card-hover transition-custom">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hobi Touring Section -->
+    <section id="hobi" class="py-20 bg-light">
+        <div class="container mx-auto px-4">
+            <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-center mb-4">
+                Hobi <span class="text-secondary">Touring</span>
+            </h2>
+            <p class="text-gray-700 text-center max-w-2xl mx-auto mb-16">
+                Jelajahi keindahan Indonesia melalui perjalanan touring saya. Setiap perjalanan memiliki cerita dan pengalaman yang tak terlupakan.
+            </p>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card Touring 1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover transition-custom">
+                    <img src="https://picsum.photos/id/1039/600/400" alt="Touring ke Pantai" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Touring Pantai Selatan</h3>
+                        <p class="text-gray-600 mb-4">Perjalanan menyusuri pantai-pantai indah di selatan Jawa dengan pemandangan laut yang memukau dan angin sepoi-sepoi.</p>
+                        <div class="flex items-center text-gray-500">
+                            <i class="fa fa-calendar mr-2"></i>
+                            <span>Juli 2023</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card Touring 2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover transition-custom">
+                    <img src="https://picsum.photos/id/1040/600/400" alt="Touring ke Pegunungan" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Eksplorasi Pegunungan</h3>
+                        <p class="text-gray-600 mb-4">Menjelajahi jalanan berkelok di pegunungan dengan udara sejuk dan pemandangan hijau yang menyejukkan mata.</p>
+                        <div class="flex items-center text-gray-500">
+                            <i class="fa fa-calendar mr-2"></i>
+                            <span>September 2023</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card Touring 3 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover transition-custom">
+                    <img src="https://picsum.photos/id/1041/600/400" alt="Touring Kota Tua" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Wisata Kota Tua</h3>
+                        <p class="text-gray-600 mb-4">Perjalanan mengunjungi kota-kota tua dengan bangunan bersejarah dan budaya yang kaya akan cerita.</p>
+                        <div class="flex items-center text-gray-500">
+                            <i class="fa fa-calendar mr-2"></i>
+                            <span>November 2023</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-block bg-secondary text-white px-8 py-3 rounded-lg font-medium hover:bg-secondary/90 transition-custom">
+                    Lihat Lebih Banyak Cerita Touring
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontak Section -->
+    <section id="kontak" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-center mb-4">
+                <span class="text-primary">Kontak</span> Saya
+            </h2>
+            <p class="text-gray-700 text-center max-w-2xl mx-auto mb-16">
+                Jangan ragu untuk menghubungi saya jika ingin berdiskusi tentang pekerjaan atau berbagi cerita tentang dunia touring.
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+                <div>
+                    <div class="bg-light p-8 rounded-xl shadow-sm">
+                        <h3 class="text-xl font-semibold mb-6">Informasi Kontak</h3>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary mr-4">
+                                    <i class="fa fa-envelope text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="text-gray-600 text-sm">Email</p>
+                                    <p class="font-medium">sugiyanto@example.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center text-secondary mr-4">
+                                    <i class="fa fa-phone text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="text-gray-600 text-sm">Telepon / WhatsApp</p>
+                                    <p class="font-medium">+62 812-3456-7890</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary mr-4">
+                                    <i class="fa fa-map-marker text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="text-gray-600 text-sm">Lokasi</p>
+                                    <p class="font-medium">Jakarta, Indonesia</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <p class="text-gray-600 mb-4">Ikuti Saya di Media Sosial:</p>
+                            <div class="flex space-x-4">
+                                <a href="#" class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-custom">
+                                    <i class="fa fa-instagram"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-secondary/10 rounded-full flex items-center justify-center text-secondary hover:bg-secondary hover:text-white transition-custom">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-primary/10 rounded
+
